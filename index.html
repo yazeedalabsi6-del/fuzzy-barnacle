@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ATELIER HELM — Architecture &amp; Interiors</title>
+    <meta
+      name="description"
+      content="Atelier Helm is an architecture studio designing residences, cultural spaces, and hospitality worldwide."
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Inter:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+              sans: ['Inter', 'system-ui', 'sans-serif'],
+            },
+            colors: {
+              bone: '#F5F2ED',
+              stone: '#E8E2D7',
+              ink: '#111110',
+              muted: '#6B6A66',
+            },
+            letterSpacing: {
+              luxe: '0.32em',
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: 'Inter', system-ui, sans-serif;
+        background: #f5f2ed;
+        color: #111110;
+      }
+      .font-display {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-weight: 300;
+        letter-spacing: -0.01em;
+      }
+      .eyebrow {
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.32em;
+        font-weight: 500;
+      }
+      .rule {
+        height: 1px;
+        background: currentColor;
+        opacity: 0.18;
+      }
+      .project-card:hover .project-img {
+        transform: scale(1.03);
+      }
+      .project-img {
+        transition: transform 1.2s cubic-bezier(0.2, 0.7, 0.2, 1);
+      }
+      .vertical-text {
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+      }
+      .marquee {
+        animation: marquee 40s linear infinite;
+      }
+      @keyframes marquee {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+    </style>
+  </head>
+
+  <body class="bg-bone text-ink antialiased">
+    <!-- Nav -->
+    <header
+      class="fixed top-0 inset-x-0 z-40 bg-bone/80 backdrop-blur-md border-b border-ink/10"
+    >
+      <div
+        class="max-w-[1600px] mx-auto px-6 md:px-10 h-16 flex items-center justify-between"
+      >
+        <a href="#" class="eyebrow">Atelier&nbsp;Helm</a>
+        <nav class="hidden md:flex items-center gap-10 eyebrow">
+          <a href="#work" class="hover:opacity-60 transition">Work</a>
+          <a href="#services" class="hover:opacity-60 transition">Services</a>
+          <a href="#studio" class="hover:opacity-60 transition">Studio</a>
+          <a href="#journal" class="hover:opacity-60 transition">Journal</a>
+          <a href="#contact" class="hover:opacity-60 transition">Contact</a>
+        </nav>
+        <a href="#contact" class="eyebrow hidden md:inline-block hover:opacity-60"
+          >EN / AR</a
+        >
+        <button class="md:hidden eyebrow" aria-label="Menu">Menu</button>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="relative pt-16">
+      <div class="relative h-[92vh] min-h-[640px] overflow-hidden">
+        <img
+          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2200&q=80"
+          alt="Minimalist concrete residence at dusk"
+          class="absolute inset-0 w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 bg-gradient-to-b from-ink/10 via-ink/20 to-ink/70"></div>
+
+        <!-- Side meta -->
+        <div
+          class="hidden md:flex absolute left-6 top-0 bottom-0 items-center text-white/80"
+        >
+          <span class="vertical-text eyebrow">Est. 2008 — Practice of Architecture</span>
+        </div>
+        <div
+          class="hidden md:flex absolute right-6 top-0 bottom-0 items-center text-white/80"
+        >
+          <span class="vertical-text eyebrow">Riyadh · Paris · New York</span>
+        </div>
+
+        <!-- Headline -->
+        <div class="relative z-10 h-full flex flex-col justify-end pb-16 md:pb-24">
+          <div class="max-w-[1600px] mx-auto w-full px-6 md:px-20">
+            <p class="eyebrow text-white/70 mb-6">Selected Works · 2008 — 2026</p>
+            <h1
+              class="font-display text-white text-[48px] leading-[0.95] md:text-[120px] lg:text-[168px]"
+            >
+              Architecture <em class="italic font-light">of</em><br />
+              stillness &amp; light.
+            </h1>
+            <div
+              class="mt-10 flex flex-col md:flex-row md:items-end md:justify-between gap-6"
+            >
+              <p class="max-w-md text-white/80 text-base leading-relaxed">
+                An atelier shaping residences, cultural landmarks and hospitality —
+                with quiet materials, precise geometry, and a reverence for place.
+              </p>
+              <a
+                href="#work"
+                class="eyebrow text-white inline-flex items-center gap-3 border-b border-white/50 pb-2 hover:gap-5 transition-all"
+              >
+                View the Portfolio
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Marquee -->
+      <div class="border-y border-ink/10 overflow-hidden">
+        <div class="marquee flex whitespace-nowrap py-5 font-display text-4xl md:text-5xl">
+          <span class="px-8">Residential</span><span class="px-8 opacity-30">✦</span>
+          <span class="px-8 italic">Hospitality</span><span class="px-8 opacity-30">✦</span>
+          <span class="px-8">Cultural</span><span class="px-8 opacity-30">✦</span>
+          <span class="px-8 italic">Interiors</span><span class="px-8 opacity-30">✦</span>
+          <span class="px-8">Masterplanning</span><span class="px-8 opacity-30">✦</span>
+          <span class="px-8">Residential</span><span class="px-8 opacity-30">✦</span>
+          <span class="px-8 italic">Hospitality</span><span class="px-8 opacity-30">✦</span>
+          <span class="px-8">Cultural</span><span class="px-8 opacity-30">✦</span>
+          <span class="px-8 italic">Interiors</span><span class="px-8 opacity-30">✦</span>
+          <span class="px-8">Masterplanning</span><span class="px-8 opacity-30">✦</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Intro -->
+    <section class="py-28 md:py-40">
+      <div class="max-w-[1600px] mx-auto px-6 md:px-20 grid md:grid-cols-12 gap-10">
+        <div class="md:col-span-3">
+          <p class="eyebrow text-muted">01 — Practice</p>
+        </div>
+        <div class="md:col-span-9">
+          <p class="font-display text-3xl md:text-5xl leading-tight max-w-4xl">
+            We design buildings that feel inevitable — drawn from the landscape,
+            detailed with patience, and made to be lived in slowly. Each project
+            is a dialogue between <em class="italic">climate, craft</em>, and
+            client.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Gallery -->
+    <section id="work" class="pb-24">
+      <div class="max-w-[1600px] mx-auto px-6 md:px-20">
+        <div class="flex items-end justify-between mb-12 md:mb-20">
+          <div>
+            <p class="eyebrow text-muted mb-4">02 — Selected Work</p>
+            <h2 class="font-display text-5xl md:text-7xl">Recent projects.</h2>
+          </div>
+          <a href="#" class="eyebrow hidden md:inline-flex items-center gap-3 hover:gap-5 transition-all">
+            All projects <span aria-hidden="true">→</span>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-x-8 gap-y-20">
+          <!-- Project 01 -->
+          <a href="#" class="project-card group md:col-span-7">
+            <div class="overflow-hidden bg-stone aspect-[4/3]">
+              <img
+                src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1800&q=80"
+                alt="Maison Dune"
+                class="project-img w-full h-full object-cover"
+              />
+            </div>
+            <div class="mt-6 flex items-start justify-between">
+              <div>
+                <p class="eyebrow text-muted">01 — Residence</p>
+                <h3 class="font-display text-3xl md:text-4xl mt-2">
+                  Maison Dune
+                </h3>
+              </div>
+              <p class="text-sm text-muted">AlUla, KSA · 2025</p>
+            </div>
+          </a>
+
+          <!-- Project 02 -->
+          <a href="#" class="project-card group md:col-span-5 md:mt-32">
+            <div class="overflow-hidden bg-stone aspect-[3/4]">
+              <img
+                src="https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=1400&q=80"
+                alt="Villa Saïda"
+                class="project-img w-full h-full object-cover"
+              />
+            </div>
+            <div class="mt-6 flex items-start justify-between">
+              <div>
+                <p class="eyebrow text-muted">02 — Hospitality</p>
+                <h3 class="font-display text-3xl md:text-4xl mt-2">
+                  Villa Saïda
+                </h3>
+              </div>
+              <p class="text-sm text-muted">Tangier · 2024</p>
+            </div>
+          </a>
+
+          <!-- Project 03 -->
+          <a href="#" class="project-card group md:col-span-5">
+            <div class="overflow-hidden bg-stone aspect-[3/4]">
+              <img
+                src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=80"
+                alt="House on the Quiet Sea"
+                class="project-img w-full h-full object-cover"
+              />
+            </div>
+            <div class="mt-6 flex items-start justify-between">
+              <div>
+                <p class="eyebrow text-muted">03 — Residence</p>
+                <h3 class="font-display text-3xl md:text-4xl mt-2">
+                  House on the Quiet Sea
+                </h3>
+              </div>
+              <p class="text-sm text-muted">Amalfi · 2024</p>
+            </div>
+          </a>
+
+          <!-- Project 04 -->
+          <a href="#" class="project-card group md:col-span-7 md:mt-24">
+            <div class="overflow-hidden bg-stone aspect-[4/3]">
+              <img
+                src="https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?auto=format&fit=crop&w=1800&q=80"
+                alt="The Marble Pavilion"
+                class="project-img w-full h-full object-cover"
+              />
+            </div>
+            <div class="mt-6 flex items-start justify-between">
+              <div>
+                <p class="eyebrow text-muted">04 — Cultural</p>
+                <h3 class="font-display text-3xl md:text-4xl mt-2">
+                  The Marble Pavilion
+                </h3>
+              </div>
+              <p class="text-sm text-muted">Kyoto · 2023</p>
+            </div>
+          </a>
+
+          <!-- Project 05 -->
+          <a href="#" class="project-card group md:col-span-12">
+            <div class="overflow-hidden bg-stone aspect-[21/9]">
+              <img
+                src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=2400&q=80"
+                alt="Desert Lantern Resort"
+                class="project-img w-full h-full object-cover"
+              />
+            </div>
+            <div class="mt-6 flex items-start justify-between">
+              <div>
+                <p class="eyebrow text-muted">05 — Hospitality</p>
+                <h3 class="font-display text-3xl md:text-5xl mt-2">
+                  Desert Lantern Resort
+                </h3>
+              </div>
+              <p class="text-sm text-muted max-w-xs text-right">
+                Neom · In progress, 2026
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="bg-ink text-bone py-28 md:py-40 mt-20">
+      <div class="max-w-[1600px] mx-auto px-6 md:px-20">
+        <div class="grid md:grid-cols-12 gap-10 mb-20 md:mb-28">
+          <div class="md:col-span-3">
+            <p class="eyebrow text-bone/60">03 — Services</p>
+          </div>
+          <div class="md:col-span-9">
+            <h2 class="font-display text-5xl md:text-7xl leading-[0.95]">
+              A practice that takes
+              <em class="italic">every line seriously</em> — from first sketch
+              to final brass detail.
+            </h2>
+          </div>
+        </div>
+
+        <div class="divide-y divide-bone/15 border-y border-bone/15">
+          <!-- Service row template -->
+          <article class="grid md:grid-cols-12 gap-8 py-10 group">
+            <div class="md:col-span-1 eyebrow text-bone/50">N° 01</div>
+            <h3 class="md:col-span-4 font-display text-3xl md:text-5xl">
+              Architecture
+            </h3>
+            <p class="md:col-span-6 text-bone/70 leading-relaxed max-w-xl">
+              Private residences, villas and ground-up houses designed from
+              concept through construction administration. Site studies,
+              massing, and material strategy tuned to the landscape.
+            </p>
+            <div class="md:col-span-1 text-right eyebrow text-bone/50">↗</div>
+          </article>
+
+          <article class="grid md:grid-cols-12 gap-8 py-10 group">
+            <div class="md:col-span-1 eyebrow text-bone/50">N° 02</div>
+            <h3 class="md:col-span-4 font-display text-3xl md:text-5xl">
+              Interiors
+            </h3>
+            <p class="md:col-span-6 text-bone/70 leading-relaxed max-w-xl">
+              Complete interior architecture — millwork, finishes, lighting and
+              custom furniture — executed with dedicated artisans in stone,
+              wood, and hand-finished plaster.
+            </p>
+            <div class="md:col-span-1 text-right eyebrow text-bone/50">↗</div>
+          </article>
+
+          <article class="grid md:grid-cols-12 gap-8 py-10 group">
+            <div class="md:col-span-1 eyebrow text-bone/50">N° 03</div>
+            <h3 class="md:col-span-4 font-display text-3xl md:text-5xl">
+              Hospitality
+            </h3>
+            <p class="md:col-span-6 text-bone/70 leading-relaxed max-w-xl">
+              Boutique hotels, retreats and restaurants. We author the guest
+              narrative end-to-end: architecture, interiors, FF&amp;E and
+              brand-led spatial identity.
+            </p>
+            <div class="md:col-span-1 text-right eyebrow text-bone/50">↗</div>
+          </article>
+
+          <article class="grid md:grid-cols-12 gap-8 py-10 group">
+            <div class="md:col-span-1 eyebrow text-bone/50">N° 04</div>
+            <h3 class="md:col-span-4 font-display text-3xl md:text-5xl">
+              Masterplanning
+            </h3>
+            <p class="md:col-span-6 text-bone/70 leading-relaxed max-w-xl">
+              Strategic planning for estates, cultural districts and resort
+              campuses — balancing program, topography, heritage and the long
+              horizon of a place.
+            </p>
+            <div class="md:col-span-1 text-right eyebrow text-bone/50">↗</div>
+          </article>
+
+          <article class="grid md:grid-cols-12 gap-8 py-10 group">
+            <div class="md:col-span-1 eyebrow text-bone/50">N° 05</div>
+            <h3 class="md:col-span-4 font-display text-3xl md:text-5xl">
+              Art Direction
+            </h3>
+            <p class="md:col-span-6 text-bone/70 leading-relaxed max-w-xl">
+              Curation, photography direction and editorial for publications,
+              exhibitions and the built record of each project.
+            </p>
+            <div class="md:col-span-1 text-right eyebrow text-bone/50">↗</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="contact" class="py-28 md:py-40">
+      <div class="max-w-[1600px] mx-auto px-6 md:px-20 grid md:grid-cols-12 gap-10 items-end">
+        <div class="md:col-span-8">
+          <p class="eyebrow text-muted mb-6">04 — Commissions</p>
+          <h2 class="font-display text-5xl md:text-8xl leading-[0.95]">
+            Begin a <em class="italic">conversation</em>.
+          </h2>
+        </div>
+        <div class="md:col-span-4 text-muted space-y-6">
+          <p>
+            We accept a limited number of commissions each year. For new
+            projects, press, or collaborations, please write to us.
+          </p>
+          <a
+            href="mailto:studio@atelierhelm.co"
+            class="eyebrow text-ink inline-flex items-center gap-3 border-b border-ink/40 pb-2 hover:gap-5 transition-all"
+          >
+            studio@atelierhelm.co <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-ink/10 py-14">
+      <div
+        class="max-w-[1600px] mx-auto px-6 md:px-20 grid md:grid-cols-4 gap-10 eyebrow text-muted"
+      >
+        <div>
+          <p class="text-ink">Atelier Helm</p>
+          <p class="mt-2 normal-case tracking-normal text-xs">
+            Practice of architecture &amp; interiors.
+          </p>
+        </div>
+        <div>
+          <p class="text-ink">Riyadh</p>
+          <p class="mt-2 normal-case tracking-normal text-xs">
+            King Abdullah Road, Al Olaya
+          </p>
+        </div>
+        <div>
+          <p class="text-ink">Paris</p>
+          <p class="mt-2 normal-case tracking-normal text-xs">
+            12 rue de Sévigné, 75004
+          </p>
+        </div>
+        <div class="md:text-right">
+          <p class="text-ink">Follow</p>
+          <p class="mt-2 normal-case tracking-normal text-xs">
+            Instagram · Are.na · LinkedIn
+          </p>
+        </div>
+      </div>
+      <div
+        class="max-w-[1600px] mx-auto px-6 md:px-20 mt-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-xs text-muted"
+      >
+        <p>© 2026 Atelier Helm. All rights reserved.</p>
+        <p>Crafted in the tradition of quiet things.</p>
+      </div>
+    </footer>
+  </body>
+</html>
