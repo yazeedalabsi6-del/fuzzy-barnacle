@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Inter, Noto_Kufi_Arabic } from "next/font/google";
 import "./globals.css";
 
@@ -27,6 +27,9 @@ export const metadata: Metadata = {
   title: "Omar Al-Absi | عمر العبسي — Lawyer & Legal Consultant",
   description:
     "Law office of Omar Al-Absi — Lawyer and Legal Consultant licensed by the Ministry of Justice, Kingdom of Saudi Arabia. License No. 451716.",
+};
+
+export const viewport: Viewport = {
   themeColor: "#020617",
 };
 
