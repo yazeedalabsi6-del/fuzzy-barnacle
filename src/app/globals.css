@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --midnight: #020617;
+  --gold: #c5a059;
+}
+
+html,
+body {
+  background: var(--midnight);
+  color: #fff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: rgba(197, 160, 89, 0.35);
+  color: #fff;
+}
+
+/* Refined scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(197, 160, 89, 0.25);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(197, 160, 89, 0.45);
+}
+
+/* Arabic numerics shift slightly */
+[dir="rtl"] {
+  font-feature-settings: "ss01", "liga";
+}
